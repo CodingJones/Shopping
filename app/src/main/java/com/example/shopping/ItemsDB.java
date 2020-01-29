@@ -4,8 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ItemsDB {
+
     private List<Item> ItemsDB;
-    public ItemsDB() { ItemsDB= new ArrayList<>(); }
+
+    public ItemsDB() {
+        ItemsDB= new ArrayList<>();
+    }
+
     public String listItems() {
         String r= "";
         for (int i= 0; i<ItemsDB.size(); i++) {
@@ -13,6 +18,7 @@ public class ItemsDB {
         }
         return r;
     }
+
     public void fillItemsDB() {
         ItemsDB.add(new Item("coffee", "Irma"));
         ItemsDB.add(new Item("carrots", "Netto"));

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Shopping</string>
+    <string name="list_all_items"> List all items</string>
 </resources>

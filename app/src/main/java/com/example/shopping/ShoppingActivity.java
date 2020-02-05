@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class ShoppingActivity extends AppCompatActivity {
@@ -16,11 +17,15 @@ public class ShoppingActivity extends AppCompatActivity {
 
     private TextView items;
     private TextView whatItem;
-    private TextView whereItem;
+    private TextView where;
+
+    private EditText editWhat;
+    private EditText editWhere;
 
     // Model: Database of items
     private ItemsDB itemsDB;
-    private Item item;
+
+    //private Item item;
     private String addItems;
 
     @Override
@@ -30,18 +35,20 @@ public class ShoppingActivity extends AppCompatActivity {
         itemsDB = new ItemsDB();
         itemsDB.fillItemsDB();
 
-
         items = (TextView) findViewById(R.id.items);
+
         whatItem = (TextView) findViewById(R.id.whatItem);
-        whereItem = (TextView) findViewById(R.id.whereItem);
+        editWhat = (EditText) findViewById(R.id.editWhatItem);
+
+        where = (TextView) findViewById(R.id.where);
+        editWhere = (EditText) findViewById(R.id.editWhere);
 
         addNewItem = (Button) findViewById(R.id.add_new_item);
         addNewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addItems = whatItem.getText().toString();
-                whatItem.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                whatItem.getText().toString();
+                addItems = editWhat.getText().toString();
+                addItems = editWhere.getText().toString();
             }
         });
 

@@ -6,13 +6,13 @@ public class Item {
     private String mWhere = null;
 
     public Item(String what, String where) {
-        mWhat= what;
-        mWhere= where;
+        mWhat = what;
+        mWhere = where;
     }
 
     @Override
     public String toString() {
-        return oneLine(""," in: ");
+        return oneLine("", " in: ");
     }
 
     public String getWhat() {
@@ -32,6 +32,6 @@ public class Item {
     }
 
     public String oneLine(String pre, String post) {
-        return pre+mWhat + post + mWhere;
+        return pre + mWhat + post + mWhere;
     }
 }

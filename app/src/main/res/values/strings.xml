@@ -4,4 +4,7 @@
     <string name="add_new_item">Add new item</string>
     <string name="what_item"> What item? </string>
     <string name="where_item"> Where? </string>
+    <string name="correct_toast"> New item added</string>
+    <string name="incorrect_toast"> Invalid input </string>
+
 </resources>
